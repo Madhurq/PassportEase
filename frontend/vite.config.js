@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ command }) => {
   const isDev = command === 'serve'
-  const apiUrl = isDev ? 'http://localhost:3001' : 'https://passportease.onrender.com'
+  const apiUrl = isDev ? 'http://localhost:3001/api' : 'https://passportease.onrender.com/api'
 
   return {
     plugins: [react()],
