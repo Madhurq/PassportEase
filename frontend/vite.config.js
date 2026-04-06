@@ -16,6 +16,9 @@ export default defineConfig(({ command }) => {
         }
       }
     },
+    build: {
+      base: '/'
+    },
     define: {
       __API_URL__: JSON.stringify(apiUrl),
       __IS_DEV__: isDev

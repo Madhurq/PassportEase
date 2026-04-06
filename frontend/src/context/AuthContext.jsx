@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
-const API_URL = '/api'
+const API_URL = typeof __API_URL__ !== 'undefined' ? __API_URL__ : '/api'
 
 const AuthContext = createContext(null)
 
