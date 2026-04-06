@@ -1,6 +1,9 @@
 import axios from 'axios'
 
-const API_URL = '/api'
+// Determine API URL based on environment
+// Development: /api (proxied to localhost:3001)
+// Production: https://passportease.onrender.com/api
+const API_URL = import.meta.env.PROD ? 'https://passportease.onrender.com/api' : '/api'
 
 const api = axios.create({
   baseURL: API_URL,
@@ -8,6 +11,12 @@ const api = axios.create({
     'Content-Type': 'application/json'
   }
 })
+
+if (import.meta.env.DEV) {
+  console.log('🔧 Development mode - API URL:', API_URL)
+} else {
+  console.log('🚀 Production mode - API URL:', API_URL)
+}
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token')
