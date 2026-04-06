@@ -20,10 +20,13 @@ export default function Login() {
     setLoading(true)
     
     try {
-      await login(email, password)
+      console.log('Attempting login...')
+      const userData = await login(email, password)
+      console.log('Login successful, user:', userData)
       navigate('/dashboard')
     } catch (err) {
-      setError(err.response?.data?.error || 'Login failed')
+      console.error('Login error:', err)
+      setError(err.response?.data?.error || err.message || 'Login failed')
     } finally {
       setLoading(false)
     }

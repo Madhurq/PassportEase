@@ -36,7 +36,11 @@ export default function Dashboard() {
       })
       navigate(`/application/${res.data.application.id}`)
     } catch (error) {
-      console.error('Failed to create application:', error)
+      if (error.response?.data?.applicationId) {
+        navigate(`/application/${error.response.data.applicationId}`)
+      } else {
+        toast.error(error.response?.data?.error || 'Failed to create application')
+      }
     }
   }
 
@@ -77,7 +81,7 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div 
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/dashboard')}
           >
             <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
               <Plane className="w-4 h-4 text-white" />
@@ -240,14 +244,14 @@ export default function Dashboard() {
           <h2 className="text-xl font-bold mb-6">Quick Actions</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: FileText, label: 'Documents', desc: 'Check requirements' },
-              { icon: Calendar, label: 'Book Slot', desc: 'Find PSK' },
-              { icon: Clock, label: 'Track Status', desc: 'View updates' },
-              { icon: Settings, label: 'Settings', desc: 'Profile' }
+              { icon: FileText, label: 'Documents', desc: 'Check requirements', action: () => handleNewApplication() },
+              { icon: Calendar, label: 'Book Slot', desc: 'Find PSK', action: () => applications.length > 0 && applications[0].status !== 'draft' ? navigate(`/application/${applications[0].id}/appointment`) : toast.info('Start a new application to book slot') },
+              { icon: Clock, label: 'Track Status', desc: 'View updates', action: () => toast.info('Check your application status on dashboard') },
+              { icon: Settings, label: 'Settings', desc: 'Profile', action: () => toast.info('Profile settings coming soon') }
             ].map((action, i) => (
               <button
                 key={i}
-                onClick={() => toast.info(`${action.label} module available from application flow`)}
+                onClick={action.action}
                 className="warm-card p-4 text-left hover:border-amber-500/50 transition group"
               >
                 <action.icon className="w-8 h-8 text-amber-400 mb-2 group-hover:text-amber-300 transition" />

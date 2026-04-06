@@ -121,7 +121,13 @@ export default function Landing() {
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button 
-                  onClick={() => navigate('/login')}
+                  onClick={() => {
+                    if (user) {
+                      navigate('/dashboard')
+                    } else {
+                      navigate('/login')
+                    }
+                  }}
                   className="px-8 py-4 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 transition flex items-center justify-center gap-2"
                 >
                   Track Application

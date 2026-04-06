@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { CheckCircle, Download, Share2, Calendar, FileText, MapPin, Clock, Plane, Home, Copy, Check } from 'lucide-react'
 import { applicationsApi } from '../api'
@@ -118,6 +118,12 @@ export default function Confirmation() {
   return (
     <div className="min-h-screen bg-[#0d0b09]">
       <main className="pt-12 pb-12 px-6 max-w-3xl mx-auto">
+        <Link to="/dashboard" className="flex items-center gap-2 mb-8 w-fit mx-auto">
+          <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
+            <Plane className="w-5 h-5 text-white" />
+          </div>
+          <span className="text-xl font-bold">PassportEase</span>
+        </Link>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

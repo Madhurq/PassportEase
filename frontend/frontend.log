@@ -1,0 +1,98 @@
+
+> passport-app@1.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m555[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m4:56:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.jsx, /src/index.css[22m
+[2m5:03:06 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:03:17 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:03:26 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:03:36 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:03:47 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:03:57 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:04:07 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:04:17 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:04:27 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:04:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ApplicationForm.jsx, /src/index.css[22m
+[2m5:04:31 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:04:33 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ApplicationForm.jsx, /src/index.css[22m
+[2m5:04:34 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:04:46 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:04:56 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:05:06 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:05:17 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:05:27 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:05:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ApplicationForm.jsx, /src/index.css[22m
+[2m5:05:32 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:05:38 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ApplicationForm.jsx, /src/index.css[22m
+[2m5:05:41 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:05:53 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:06:14 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/applications/64328acf-39f0-448c-910f-1d1c9d291c6d[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)
+[2m5:06:14 pm[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/refresh[39m
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1139:18)
+    at afterConnectMultiple (node:net:1712:7)

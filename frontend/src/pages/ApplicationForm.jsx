@@ -33,7 +33,7 @@ export default function ApplicationForm() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (applicationId && Object.keys(formData).length > 0) {
-        saveDraft()
+        saveDraft(false)
       }
     }, 10000)
     return () => clearInterval(interval)
@@ -49,18 +49,21 @@ export default function ApplicationForm() {
     }
   }
 
-  const saveDraft = async (showToast = false) => {
+  const saveDraft = async (showToast = false, exit = false) => {
     if (!applicationId) return
     setSaving(true)
     try {
       await applicationsApi.update(applicationId, {
-        form_data: formData,
-        current_step: currentStep,
+        data: formData,
+        currentStep: currentStep,
         status: 'draft'
       })
       setLastSaved(new Date())
       if (showToast) {
         toast.info(`Draft saved at ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`)
+      }
+      if (exit) {
+        navigate('/dashboard')
       }
     } catch (error) {
       console.error('Failed to save:', error)
@@ -372,7 +375,10 @@ export default function ApplicationForm() {
     <div className="min-h-screen bg-[#0d0b09]">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0d0b09]/90 backdrop-blur-md border-b border-amber-500/20">
         <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <div 
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => navigate('/dashboard')}
+          >
             <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
               <Plane className="w-4 h-4 text-white" />
             </div>
@@ -393,7 +399,7 @@ export default function ApplicationForm() {
               ) : null}
             </div>
             <button 
-              onClick={() => saveDraft(true)}
+              onClick={() => saveDraft(true, true)}
               className="flex items-center gap-2 px-4 py-2 rounded-xl border border-amber-500/30 hover:border-amber-500 transition"
             >
               <Save className="w-4 h-4" />
